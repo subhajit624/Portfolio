@@ -18,6 +18,9 @@ app.use(cors({
 app.use(express.json());
 
 //routes
+app.get('/',(req, res) => {
+  res.send("running...");
+})
 app.use('/api/contact', contactRoutes);
 app.use('/api/skills', skillRoutes);
 app.use('/api/education', educationRoutes);
