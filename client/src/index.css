@@ -6,6 +6,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  font-family: "Playwrite NZ Basic", cursive;
+  font-weight: 300;
+}
 
 /* ================= BACKGROUND LAYOUT ================= */
 
