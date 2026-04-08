@@ -6,6 +6,9 @@ export default function Projects() {
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(false);
   const [expandedId, setExpandedId] = useState(null);
+  const [showAll, setShowAll] = useState(false);
+
+  const visibleProjects = showAll ? projects : projects.slice(0, 4);
 
   const getAllProjects = async () => {
     try {
@@ -53,7 +56,7 @@ export default function Projects() {
     md:max-w-3xl
     lg:max-w-6xl
     mx-auto">
-        {projects.map((project) => {
+        {visibleProjects.map((project) => {
           const isExpanded = expandedId === project._id;
 
           return (
@@ -136,6 +139,17 @@ export default function Projects() {
           );
         })}
       </div>
+
+      {projects.length > 4 && (
+        <div className="text-center mt-10">
+          <button
+            onClick={() => setShowAll((prev) => !prev)}
+            className="text-red-400 text-sm hover:text-red-300 transition"
+          >
+            {showAll ? "Show less" : "Show more..."}
+          </button>
+        </div>
+      )}
     </section>
   );
 }
