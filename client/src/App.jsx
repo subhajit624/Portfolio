@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 import Navbar from "./pages/Navbar";
 import Home from "./pages/Home";
@@ -23,14 +23,16 @@ export default function App() {
 
   return (
     <div className="overflow-x-hidden w-full">
-      <div className="fixed inset-0 -z-10 overflow-hidden">
-        <Lightning
-          hue={260}
-          xOffset={0}
-          speed={1}
-          intensity={1}
-          size={1}
-        />
+      <div className="fixed inset-0 -z-10 flex items-center justify-center overflow-hidden">
+        <div className="h-full w-[160vw] min-w-full sm:w-full">
+          <Lightning
+            hue={260}
+            xOffset={0}
+            speed={1}
+            intensity={1}
+            size={1}
+          />
+        </div>
       </div>
 
       <Navbar
