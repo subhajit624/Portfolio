@@ -17,6 +17,12 @@ export default function App() {
   const projectRef = useRef(null);
   const contactRef = useRef(null);
 
+  // Randomly select either 0 or 260
+  const [hue] = useState(() => {
+  const hues = [0, 235, 260];
+  return hues[Math.floor(Math.random() * hues.length)];
+  });
+
   const scrollTo = (ref) => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
   };
@@ -26,7 +32,7 @@ export default function App() {
       <div className="fixed inset-0 -z-10 flex items-center justify-center overflow-hidden">
         <div className="h-full w-[160vw] min-w-full sm:w-full">
           <Lightning
-            hue={260}
+            hue={hue}
             xOffset={0}
             speed={1}
             intensity={1}
