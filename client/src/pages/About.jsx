@@ -25,12 +25,12 @@ export default function About({ scrollToContact }) {
 
         <div className="flex flex-col gap-6">
           <div className="backdrop-blur-md bg-black/40 border border-white/10 rounded-2xl p-8 text-center">
-            <h3 className="text-5xl font-bold text-white"><CountUp from={0} to={6} separator="," direction="up" duration={3} className="count-up-text" startCounting={false}/>+</h3>
+            <h3 className="text-5xl font-bold text-white"><CountUp from={0} to={7} separator="," direction="up" duration={3} className="count-up-text" startCounting={false}/>+</h3>
             <p className="text-gray-400 mt-2 text-lg">Projects Completed</p>
           </div>
 
           <div className="backdrop-blur-md bg-black/40 border border-white/10 rounded-2xl p-8 text-center">
-            <h3 className="text-5xl font-bold text-white"><CountUp from={0} to={350} separator="," direction="up" duration={3} className="count-up-text" startCounting={false}/>+</h3>
+            <h3 className="text-5xl font-bold text-white"><CountUp from={0} to={400} separator="," direction="up" duration={3} className="count-up-text" startCounting={false}/>+</h3>
             <p className="text-gray-400 mt-2 text-lg">DSA Questions Solved</p>
           </div>
         </div>
